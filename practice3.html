@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Practice 3. Password Checker</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Aiden Burke">
+		<meta name="description" content="Practice 3. Password Checker">
+	<style>
+		body {
+			background-color: #D3E8FF;
+			font: 16px Helvetica, sans-serif;
+		}
+		button {
+			background-color: #5AAAFF;
+			color: white;
+			text-align: center;
+			display: inline-block;
+			font: 16px Helvetica, sans-serif;
+		}
+		button:hover {
+			background-color: #2991FF;
+			color: white;
+		}
+	</style>
+	</head>
+
+	<body>
+		<h1>Practice 3. Password Checker</h1>
+		<script>
+			function checkPasswords() {
+				var password1 = document.getElementById("password1").value;
+				var password2 = document.getElementById("password2").value;
+
+				if (password1.length < 8) {
+					alert("The length of the first password is less than 8.");
+				} else if (password2.length < 8) {
+					alert("The length of the second password is less than 8.");
+				} else if (password1 != password2) {
+					alert("The second password does not match the first password.");
+				} else {
+					alert("The passwords match!");
+				}
+			}
+		</script>
+		<br>First Password: <input type="text" id="password1" val="">
+		<br>Second Password: <input type="text" id="password2" val=""><br>
+		<button onclick="checkPasswords()">Check Passwords</button>
+	</body>
+</html>
+
