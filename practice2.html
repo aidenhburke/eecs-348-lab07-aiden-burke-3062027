@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+	<head>
+		<title>CSS Font Control</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Aiden Burke">
+		<meta name="description" content="Practice 2: CSS Font Controller">
+
+		<style>
+		body {
+			background-color: #D3E8FF;
+			font: 16px Helvetica, sans-serif;
+		}
+		p { 
+			border-style: solid;
+			border-width: 5px;
+		}
+		button {
+			background-color: #5AAAFF;
+			color: white;
+			text-align: center;
+			display: inline-block;
+			font: 16px Helvetica, sans-serif;
+		}
+		button:hover {
+			background-color: #2991FF;
+			color: white;
+		}
+
+		</style>
+	</head>
+	<body>
+		<h1>Practice 2: CSS Font Control</h1>
+		<p id="paragraph">This is a dummy paragraph; use the text input boxes below to change the RGB values of the paragraph background as well as the RGB values of the border and the border width.</p>
+
+		<script>
+			function change_color() {
+				var borderR = document.getElementById("borderR").value;
+				var borderG = document.getElementById("borderG").value;
+				var borderB = document.getElementById("borderB").value;
+				var backgroundR = document.getElementById("backgroundR").value;
+				var backgroundG = document.getElementById("backgroundG").value;
+				var backgroundB = document.getElementById("backgroundB").value;
+				var border_width = document.getElementById("width").value;
+				var par = document.getElementById("paragraph");
+				par.style.borderColor = `rgb(${borderR},${borderG},${borderB})`;
+				par.style.borderWidth = border_width;
+				par.style.backgroundColor = `rgb(${backgroundR},${backgroundG},${backgroundB})`;
+			}
+
+		</script>
+		<br>
+		Border R(0-255): <input type="text" id="borderR" value=""><br>
+		Border G(0-255): <input type="text" id="borderG" value=""><br>
+		Border B(0-255): <input type="text" id="borderB" value=""><br>
+		Border Width(px):  <input type="text" id="width" value=""><br>
+		Background R(0-255): <input type="text" id="backgroundR" value=""><br>
+		Background G(0-255): <input type="text" id="backgroundG" value=""><br>
+		Background B(0-255): <input type="text" id="backgroundB" value=""><br>
+		<button onclick="change_color()">Update Color</button>
+	</body>
+</html>
+
